@@ -1,0 +1,18 @@
+
+[1mFrom:[0m /home/nick/Desktop/labs/sinatra-mvc-lab-online-web-pt-110419/models/piglatinizer.rb @ line 9 PigLatinizer#piglatinize:
+
+     [1;34m8[0m:   [32mdef[0m [1;34mpiglatinize[0m(word)
+ =>  [1;34m9[0m: binding.pry
+    [1;34m10[0m:     first_letter = word.split([31m[1;31m'[0m[31m[1;31m'[0m[31m[0m).first [1;34m#get first letter[0m
+    [1;34m11[0m: 
+    [1;34m12[0m:     [1;34m#if first letter is vowel, add "way"[0m
+    [1;34m13[0m:     [32mif[0m first_letter.match([35m[1;35m/[0m[35ma|e|i|o|u[1;35m/[0m[35m[0m)
+    [1;34m14[0m:       new_word = word+[31m[1;31m"[0m[31mway[1;31m"[0m[31m[0m
+    [1;34m15[0m:     [1;34m#otherwise take first part and move to the end and add "ay"[0m
+    [1;34m16[0m:     [32melse[0m
+    [1;34m17[0m:       parts = word.split([35m[1;35m/[0m[35m([aeiou].*)[1;35m/[0m[35m[0m) [1;34m#split word by first vowel[0m
+    [1;34m18[0m:       new_word = parts[[1;34m1[0m].to_s+parts[[1;34m0[0m].to_s+[31m[1;31m"[0m[31may[1;31m"[0m[31m[0m
+    [1;34m19[0m:     [32mend[0m
+    [1;34m20[0m:     new_word
+    [1;34m21[0m:   [32mend[0m
+
